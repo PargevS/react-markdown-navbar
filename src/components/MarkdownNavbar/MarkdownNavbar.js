@@ -13,29 +13,6 @@ export const MarkdownNavbar = React.memo(({navRef, contentRef, className}) => {
                 h.id = idx;
             });
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const currentY = entry.boundingClientRect.y;
-                    const currentRatio = entry.intersectionRatio;
-                    const isIntersecting = entry.isIntersecting;
-                    if (currentY < 100) {
-                        entry.target.classList.add('fancy');
-                        console.log("entry.id =>", entry.target.id);
-                        if (headings[entry.target.id]) setActiveItemId(entry.target.id);
-                    } else {
-                        entry.target.classList.remove('fancy');
-                        if (headings[entry.target.id]) {
-                            // headings[entry.target.id].classList.remove('active');
-                            // setPrevItemId(entry.target.id)
-                        }
-                    }
-                });
-            });
-
-            headings.forEach((header) => {
-                observer.observe(header);
-            });
-
             setNavStructure([...headings]);
         }
     }, [contentRef, navRef])
