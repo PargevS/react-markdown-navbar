@@ -1,0 +1,64 @@
+.markdown-nav-item {
+    color: rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.markdown-nav-item.active {
+    border-left: 2px solid #1a63ea;
+}
+
+
+.markdown-nav-item:hover{
+    color: #1a63ea;
+}
+
+h1.markdown-nav-item {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+h2.markdown-nav-item {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+h3.markdown-nav-item {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+h4.markdown-nav-item {
+    font-size: 14.5px;
+    padding-left: 20px;
+}
+
+h5.markdown-nav-item {
+    font-size: 13px;
+    padding-left: 25px;
+}
+
+h6.markdown-nav-item {
+    font-size: 12px;
+    padding-left: 30px;
+}
+
+.markdown-nav-item a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.markdown-nav-item.active a {
+    color: #1a63ea;
+    text-decoration: none;
+}
+
+
+.markdown-nav-item:hover .markdown-nav-item span.no-events {
+    color: #1a63ea;
+}
+
+.markdown-nav-item .no-events {
+    pointer-events: none;
+}
